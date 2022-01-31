@@ -1,1 +1,14 @@
-// font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  $orange: #ffa067;
+  $orange-light: #ffede6;
+  $purple: #5843be;
+  $purple-light: #f6f4ff;
+  $red: #fe7066;
+}
