@@ -11,4 +11,25 @@
   $purple: #5843be;
   $purple-light: #f6f4ff;
   $red: #fe7066;
+  $border-radius: 10px;
+  $border: 0.5px solid lightgrey;
+}
+
+img {
+  max-width: 20%;
+  // display: block;
+  margin: 0;
+}
+
+body,
+html {
+  height: 100vh;
+}
+
+#container {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr;
+  grid-template-areas: "n m p";
 }
