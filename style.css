@@ -27,6 +27,7 @@ html {
 }
 
 .sub-title {
+  color: #b0b5bd;
   font-weight: 400;
   font-size: 0.9em;
 }
@@ -247,13 +248,11 @@ html {
 }
 
 .main .main-middle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
 }
 
 .main .main-middle .group-info {
@@ -264,9 +263,84 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1.5rem;
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
   padding: 1.5rem;
+}
+
+.main .main-middle .group-info .groupHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main-middle .group-info .groupHomework {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffa067;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.main .main-middle .group-info .groupHomework .groupHomework-title {
+  font-weight: 600;
+}
+
+.main .main-middle .group-info .groupHomework .groupHomework-title span {
+  font-size: 0.8em;
+}
+
+.main .main-middle .group-info .groupFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main-middle .flagProgress {
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main-middle .flagProgress .flag {
+  padding: 0.5rem;
+  -webkit-box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+          box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border-radius: 8px;
+}
+
+.main .main-middle .flagProgress progress::-webkit-progress-bar {
+  border-radius: 7px;
+}
+
+.main .main-middle .flagProgress progress::-webkit-progress-value {
+  background-color: #ff7b00;
+  border-radius: 7px;
+  -webkit-box-shadow: 1px 1px 5px 3px rgba(255, 0, 0, 0.8);
+          box-shadow: 1px 1px 5px 3px rgba(255, 0, 0, 0.8);
 }
 /*# sourceMappingURL=style.css.map */

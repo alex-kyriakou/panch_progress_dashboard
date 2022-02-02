@@ -7,7 +7,7 @@
 
 // Variables
 $grey-light: #f1f3f6;
-$grey-dark: #c5cdd9;
+$grey-dark: #b0b5bd;
 $orange: rgb(255, 160, 103);
 $orange-dark: #fb7237;
 $orange-light: #ffede6;
@@ -37,6 +37,7 @@ html {
 }
 
 .sub-title {
+  color: $grey-dark;
   font-weight: 400;
   font-size: 0.9em;
 }
@@ -212,17 +213,69 @@ html {
   }
 
   .main-middle {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
 
     .group-info {
       display: flex;
       flex-direction: column;
+      gap: 1.5rem;
 
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       border-radius: 10px;
       padding: 1.5rem;
+
+      .groupHeader {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .groupHomework {
+        display: flex;
+        color: #fff;
+        justify-content: space-between;
+        align-items: center;
+        background: $orange;
+        border-radius: 10px;
+        padding: 1.5rem;
+
+        .groupHomework-title {
+          font-weight: 600;
+          span {
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      .groupFooter {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .flagProgress {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .flag {
+        padding: 0.5rem;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+          rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        border-radius: 8px;
+      }
+
+      progress::-webkit-progress-bar {
+        // background-color: $orange;
+        border-radius: 7px;
+      }
+      progress::-webkit-progress-value {
+        background-color: rgb(255, 123, 0);
+        border-radius: 7px;
+        box-shadow: 1px 1px 5px 3px rgba(255, 0, 0, 0.8);
+      }
     }
   }
 }
