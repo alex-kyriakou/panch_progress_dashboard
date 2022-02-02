@@ -21,6 +21,21 @@ html {
       grid-template-areas: "n m p";
 }
 
+.title {
+  font-weight: 500;
+  color: #222222;
+}
+
+.sub-title {
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+.large-title {
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
 #nav {
   background-color: #f1f3f6;
   -ms-grid-row: 1;
@@ -69,8 +84,8 @@ html {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  -webkit-box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.8), inset -1px -1px 4px white, 1px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 4px rgba(255, 255, 255, 0.5), inset 3px 3px 10px rgba(88, 67, 190, 0.4);
-          box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.8), inset -1px -1px 4px white, 1px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 4px rgba(255, 255, 255, 0.5), inset 3px 3px 10px rgba(88, 67, 190, 0.4);
+  -webkit-box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.8), inset -1px -1px 4px white, inset -1px -1px 4px white, 1px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 4px rgba(255, 255, 255, 0.5), inset 4px 4px 10px rgba(88, 67, 190, 0.4), inset 3px 3px 2px rgba(88, 67, 190, 0.4);
+          box-shadow: inset -3px -3px 4px rgba(255, 255, 255, 0.8), inset -1px -1px 4px white, inset -1px -1px 4px white, 1px 1px 4px rgba(0, 0, 0, 0.1), 1px 1px 4px rgba(255, 255, 255, 0.5), inset 4px 4px 10px rgba(88, 67, 190, 0.4), inset 3px 3px 2px rgba(88, 67, 190, 0.4);
 }
 
 #nav a .filter {
@@ -95,5 +110,163 @@ html {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6/7;
+}
+
+.main {
+  padding: 0 3rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: m;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr auto 1fr;
+      grid-template-rows: 1fr 1fr auto 1fr;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: #202240;
+  letter-spacing: 0.3px;
+  place-self: end start;
+  margin-bottom: 2rem;
+}
+
+.main .main-top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr 1fr;
+      grid-template-columns: 3fr 1fr 1fr;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  -ms-flex-line-pack: start;
+      align-content: start;
+}
+
+.main .main-top .exam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #5843be;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.main .main-top .exam .sub-title {
+  color: #8d7fd3;
+}
+
+.main .main-top .exam .sub-title span {
+  margin-left: 1rem;
+  color: #ccc;
+}
+
+.main .main-top .exam .large-title {
+  color: #fff;
+}
+
+.main .main-top .exam .test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main-top .exam .test a {
+  color: #fff;
+}
+
+.main .main-top .homework.todo {
+  background: #ffede6;
+  border-radius: 10px;
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main-top .homework.todo i {
+  color: #ffa067;
+  font-size: 1.3em;
+}
+
+.main .main-top .homework.todo .todo-title {
+  color: #fb7237;
+  font-weight: bold;
+}
+
+.main .main-top .homework.todo s .sub-title {
+  color: #ffa067;
+}
+
+.main .main-top .reading {
+  background: #f6f4ff;
+  border-radius: 10px;
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .main-top .reading i {
+  color: #5843be;
+  font-size: 1.5em;
+}
+
+.main .main-top .reading .todo-title {
+  color: #8d7fd3;
+  font-weight: bold;
+}
+
+.main .main-top .reading .sub-title {
+  color: #5843be;
+}
+
+.main .main-middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.main .main-middle .group-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  padding: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
